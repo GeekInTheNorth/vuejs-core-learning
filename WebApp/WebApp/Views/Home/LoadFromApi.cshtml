@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Load From Api";
+    Layout = "~/Views/Shared/_shared.cshtml";
+}
+
+<h2>Load Simple List From Api</h2>
+
+<div id="app">
+    <ul>
+        <li v-for="result in results">
+            {{ result }}
+        </li>
+    </ul>
+</div>
+
+<script src="~/js/Home/LoadFromApi.js"></script>
