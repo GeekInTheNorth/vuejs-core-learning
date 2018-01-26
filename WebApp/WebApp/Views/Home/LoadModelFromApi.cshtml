@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Load Model From Api";
+    Layout = "~/Views/Shared/_shared.cshtml";
+}
+
+<h2>Load Model From Api</h2>
+
+<div id="app">
+    <select v-on:change="getData" v-model="selected">
+        <option selected="selected">1</option>
+        <option>2</option>
+    </select>
+    <br />
+    <span>Forename:</span><br />
+    <input type="text" v-model="employee.forename" placeholder="Forename" /><br />
+    <span>Surname:</span><br />
+    <input type="text" v-model="employee.surname" placeholder="Surname" /><br />
+</div>
+
+<script src="~/js/Home/LoadModelFromApi.js"></script>
