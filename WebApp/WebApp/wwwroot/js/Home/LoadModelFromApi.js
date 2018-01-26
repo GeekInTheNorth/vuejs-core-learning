@@ -7,6 +7,9 @@
             surname: ""
         }
     },
+    mounted() {
+        this.getData();
+    },
     methods: {
         getData: function () {
             var id = this.selected;
@@ -17,5 +20,3 @@
         }
     }
 });
-
-app.getData();
