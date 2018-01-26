@@ -17,6 +17,11 @@
             $.get(url).done(data => {
                 this.employee = data;
             });
+        },
+        save: function () {
+            var id = this.selected;
+            var url = window.location.origin + "/api/Data/save/" + id;
+            post(url, this.employee);
         }
     }
 });

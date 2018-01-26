@@ -33,5 +33,11 @@ namespace WebApp.Controllers
                     return null;
             }
         }
+
+        [HttpPost]
+        public void Save(int id, [FromBody] PersonModel person)
+        {
+            var emp = person;
+        }
     }
 }
