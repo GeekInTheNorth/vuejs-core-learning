@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Collections";
+    Layout = "~/Views/Shared/_shared.cshtml";
+}
+
+<h2>Collections</h2>
+
+<div id="app">
+    <h3>{{ Collection.collectionName }}</h3>
+    <table>
+        <tr v-for="item in Collection.items">
+            <td>{{ item.id }}</td>
+            <td>
+                <input v-model="item.name" placeholder="Enter Name" type="text" />
+            </td>
+        </tr>
+    </table>
+    <button v-on:click="save">Save</button>
+</div>
+
+<script src="~/js/Home/Collections.js"></script>

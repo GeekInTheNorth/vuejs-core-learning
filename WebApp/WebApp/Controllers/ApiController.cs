@@ -35,9 +35,30 @@ namespace WebApp.Controllers
         }
 
         [HttpPost]
-        public void Save(int id, [FromBody] PersonModel person)
+        public void Save(int id, [FromBody]PersonModel person)
         {
             var emp = person;
+        }
+
+        [HttpGet]
+        public CollectionModel Collection()
+        {
+            return new CollectionModel
+            {
+                CollectionName = "My Collection",
+                Items = new List<CollectionModelItem>
+                {
+                    new CollectionModelItem { Id = 1, Name = "One" },
+                    new CollectionModelItem { Id = 2, Name = "Two" },
+                    new CollectionModelItem { Id = 3, Name = "Three" }
+                }
+            };
+        }
+
+        [HttpPost]
+        public void Collection([FromBody]CollectionModel model)
+        {
+            var incomingModel = model;
         }
     }
 }
